@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NTWaterfallViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewProtocol{
+class NTWaterfallViewCell: UICollectionViewCell, NTTansitionWaterfallGridViewProtocol {
     var imageName : String?
     var imageViewContent : UIImageView = UIImageView()
     required init?(coder aDecoder: NSCoder) {
@@ -25,9 +25,9 @@ class NTWaterfallViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewPro
         imageViewContent.image = UIImage(named: imageName!)
     }
     
-    func snapShotForTransition() -> UIView! {
-        let snapShotView = UIImageView(image: self.imageViewContent.image)
-        snapShotView.frame = imageViewContent.frame
-        return snapShotView
-    }
+  var snapShotForTransition: UIView {
+    let snapShotView = UIImageView(image: self.imageViewContent.image)
+    snapShotView.frame = imageViewContent.frame
+    return snapShotView
+  }
 }

@@ -14,7 +14,7 @@ import UIKit
 }
 
 @objc protocol NTTansitionWaterfallGridViewProtocol{
-    func snapShotForTransition() -> UIView!
+  var snapShotForTransition: UIView { get }
 }
 
 @objc protocol NTWaterFallViewControllerProtocol : NTTransitionProtocol{
